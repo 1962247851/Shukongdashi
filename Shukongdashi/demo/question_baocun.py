@@ -115,20 +115,20 @@ def insertTwoNodes(entity1, relation, entity2, lable1, lable2):
 
 
 def insertPa(pinpai, xinghao, errorid, describe, selectedList, yuanyin, answer):
-    jieba.load_userdict(os.getcwd() + '\\Shukongdashi\\demo\\fencidian.txt')
+    jieba.load_userdict(os.getcwd() + '/Shukongdashi/demo/fencidian.txt')
     pattern = r'\.|;|。|；|！'
     pattern2 = r',|，'
 
     # 加载停用词
     stopwords = []
-    with open(os.getcwd() + '\\Shukongdashi\\demo\\stopwords.txt', 'r', encoding='utf-8') as f:
+    with open(os.getcwd() + '/Shukongdashi/demo/stopwords.txt', 'r', encoding='utf-8') as f:
         st = f.readlines()
     for line in st:
         line = line.strip().encode('utf-8').decode('utf-8-sig')
         stopwords.append(line)
     # 加载故障部位
     buweizhuyu = []
-    with open(os.getcwd() + '\\Shukongdashi\\demo\\zhuyu.txt', 'r', encoding='utf-8') as f:
+    with open(os.getcwd() + '/Shukongdashi/demo/zhuyu.txt', 'r', encoding='utf-8') as f:
         st = f.readlines()
     for line in st:
         line = line.strip().encode('utf-8').decode('utf-8-sig')  # 防止BOM现象

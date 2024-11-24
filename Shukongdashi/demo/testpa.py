@@ -108,7 +108,7 @@ def readjsonAndsort():
     dic={}#用来存储评论
     nobd = []  # 存储非百度知道的内容
     sumallzd = 0  # 用于控制得到的优先性高的评论只输出前五条
-    with open(os.getcwd()+"\\Shukongdashi\\demo\\data.json", 'rb') as f:
+    with open(os.getcwd()+"/Shukongdashi/demo/data.json", 'rb') as f:
       temp = json.loads(f.read())
       select_sim=0
       select_simnum=0
@@ -177,7 +177,7 @@ def readjsonAndsort():
         pass
     except  WindowsError:
         pass
-    os.remove(os.getcwd()+"\\Shukongdashi\\demo\\data.json")
+    os.remove(os.getcwd()+"/Shukongdashi/demo/data.json")
     return data_all
 
 def lists_combination(lists, code=''):
@@ -193,20 +193,20 @@ def main(pinpai, xinghao, errorid, describe, relationList, ret_dict):
     #keyword = input("输入关键字:")
     if errorid!='':
         describe += '，' + errorid + '报警'
-    jieba.load_userdict(os.getcwd()+'\\Shukongdashi\\demo\\fencidian.txt')
+    jieba.load_userdict(os.getcwd()+'/Shukongdashi/demo/fencidian.txt')
     pattern = r'\.|;|。|；|！'
     pattern2 = r',|，'
 
     # 加载停用词
     stopwords = []
-    with open(os.getcwd()+'\\Shukongdashi\\demo\\stopwords.txt', 'r', encoding='utf-8') as f:
+    with open(os.getcwd()+'/Shukongdashi/demo/stopwords.txt', 'r', encoding='utf-8') as f:
         st = f.readlines()
     for line in st:
         line = line.strip().encode('utf-8').decode('utf-8-sig')
         stopwords.append(line)
     # 加载故障部位
     buweizhuyu = []
-    with open(os.getcwd()+'\\Shukongdashi\\demo\\zhuyu.txt', 'r', encoding='utf-8') as f:
+    with open(os.getcwd()+'/Shukongdashi/demo/zhuyu.txt', 'r', encoding='utf-8') as f:
         st = f.readlines()
     for line in st:
         line = line.strip().encode('utf-8').decode('utf-8-sig')  # 防止BOM现象
@@ -247,7 +247,7 @@ def main(pinpai, xinghao, errorid, describe, relationList, ret_dict):
     zan = []
     page = 1
 
-    file = open(os.getcwd()+"\\Shukongdashi\\demo\\data.json", 'w+', encoding='utf-8')
+    file = open(os.getcwd()+"/Shukongdashi/demo/data.json", 'w+', encoding='utf-8')
     file.write('[\n')
     lgt=0
     for que in ques:
