@@ -2,8 +2,11 @@ django==2.2.3
 PyMySQL==0.9.3
 jieba==0.39
 py2neo==2021.2.4
-tensorflow==1.14.0
+#tensorflow==1.14.0
 cryptography==40.0.2
 requests==2.14.2
 beautifulsoup4==4.6.0
 lxml
+# MacOS
+https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.14.0-buster/tensorflow-1.14.0-cp37-none-linux_aarch64.whl
+protobuf==3.9.0
