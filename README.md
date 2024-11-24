@@ -441,6 +441,11 @@ curl "http://127.0.0.1:8000/save?pinpai=发那科&xinghao=MATE-TD&errorid=ALM401
 }
 ```
 ### 3 部署过程
+
+```bash
+git clone https://github.com/1962247851/Shukongdashi.git
+```
+
 #### 3.1 配置关系型数据库MySQL
 ##### 3.1.1 安装
 MySQL 8.0、MySQL 5.7 均可
@@ -500,10 +505,6 @@ LOAD CSV  WITH HEADERS FROM "file:///xianxaingbaojing.csv" AS line MATCH (entity
 ```
 ![asset/img_1.png](asset/img_1.png)
 ### 3.3 配置运行环境
-
-```bash
-git clone https://github.com/1962247851/Shukongdashi.git
-```
 
 ```bash
 conda create -n skds python=3.6 -y
