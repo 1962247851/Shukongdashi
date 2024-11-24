@@ -9,9 +9,9 @@ from itertools import combinations
 import jieba.analyse
 import jieba.posseg
 
-from Shukongdashi.config import MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USERNAME, MYSQL_HOST
+from Shukongdashi.config import MYSQL_DATABASE, MYSQL_PASSWORD, MYSQL_USERNAME, MYSQL_HOST, MYSQL_PORT
 from Shukongdashi.test_my.test_cnnrnn.predict import CnnModel
-db = pymysql.connect(host=MYSQL_HOST, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db=MYSQL_DATABASE)
+db = pymysql.connect(host=MYSQL_HOST,port=MYSQL_PORT, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db=MYSQL_DATABASE)
 cursor = db.cursor()  # 获取指针以操作数据库
 cursor.execute('set names utf8')
 yuanyindb = []

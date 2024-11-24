@@ -6,4 +6,4 @@ tensorflow==1.14.0
 cryptography==40.0.2
 requests==2.14.2
 beautifulsoup4==4.6.0
-lxml==3.7.3
+lxml
