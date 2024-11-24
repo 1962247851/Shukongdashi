@@ -1,6 +1,8 @@
 import os
 import json
 import re
+
+from Shukongdashi.config import MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DATABASE
 from Shukongdashi.toolkit.pre_load import cnn_model
 import jieba
 import jieba.posseg
@@ -11,7 +13,7 @@ from Shukongdashi.toolkit.pre_load import neo_con
 import random
 import pymysql
 
-db_mysql = pymysql.connect(host='localhost', user='root', password='root', db='sg_faq')
+db_mysql = pymysql.connect(host=MYSQL_HOST, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db=MYSQL_DATABASE)
 cursor = db_mysql.cursor()  # 获取指针以操作数据库
 cursor.execute('set names utf8')
 db = neo_con

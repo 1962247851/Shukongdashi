@@ -1,11 +1,16 @@
 from py2neo import Graph, Node, Relationship, cypher, Path
+
+from Shukongdashi.config import NEO4J_URI, NEO4J_USERNAME, NEO4J_PASSWORD
+
+
 class Neo4j():
 	graph = None
 	def __init__(self):
 		print("create neo4j class ...")
 
 	def connectDB(self):
-		self.graph = Graph("http://localhost:7474", username="neo4j", password="hadoop")
+		# self.graph = Graph("http://localhost:7474", username="neo4j", password="hadoop")
+		self.graph = Graph(NEO4J_URI, auth=(NEO4J_USERNAME,NEO4J_PASSWORD))
 	#下面两个函数分别是插入节点和关系
 	def insertNode(self,entity,lable):
 		try:

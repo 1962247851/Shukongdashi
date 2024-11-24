@@ -4,6 +4,8 @@ import pymysql
 import jieba.posseg
 import jieba
 import os
+
+from Shukongdashi.config import MYSQL_USERNAME, MYSQL_HOST, MYSQL_PASSWORD, MYSQL_DATABASE
 from Shukongdashi.demo import cosin
 from Shukongdashi.toolkit.pre_load import neo_con
 from Shukongdashi.toolkit.pre_load import cnn_model
@@ -204,7 +206,7 @@ def getTuili(pinpai, xinghao, errorid, describe, relationList, ret_dict):
     for yuanyinItem in list1:
         # 查解决方法
         jiejuelist = []
-        db_mysql = pymysql.connect(host='localhost', user='root', password='root', db='sg_faq')
+        db_mysql = pymysql.connect(host=MYSQL_HOST, user=MYSQL_USERNAME, password=MYSQL_PASSWORD, db=MYSQL_DATABASE)
         cursor = db_mysql.cursor()  # 获取指针以操作数据库
         cursor.execute('set names utf8')
         print(yuanyinItem)

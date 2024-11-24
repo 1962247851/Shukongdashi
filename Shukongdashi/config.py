@@ -1,0 +1,12 @@
+# Shukongdashi/config.py
+
+# MySQL连接配置
+MYSQL_HOST="127.0.0.1"
+MYSQL_USERNAME="root"
+MYSQL_PASSWORD="root"
+MYSQL_DATABASE="sg_faq"
+
+# Neo4j连接配置
+NEO4J_URI="neo4j://127.0.0.1:7687"
+NEO4J_USERNAME="neo4j"
+NEO4J_PASSWORD="abc1234567"
