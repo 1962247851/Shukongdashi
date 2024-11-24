@@ -158,7 +158,7 @@ def readjsonAndsort(ret_dict):
         ret_dict['answer'].append({'answer': '使用时间较长, 液压站的输出压力调得太高，导致联轴器的啮合齿损坏，从而当液压电动机旋转时，联 轴器不能很好地传递转矩，从而产生异响。更换该联轴器后，机床恢复正常。','zan':6})
         print('未搜索到您的问题！来看看相似问题吧！')
     try:#读完之后对文件进行删除 下一次查询不一样的问题生成的答案会不一样 相当于更新了data.json
-        os.remove( 'data.json' )
+        os.remove( os.getcwd()+"/Shukongdashi/demo/data.json" )
     except  WindowsError:
         pass
     return ret_dict
