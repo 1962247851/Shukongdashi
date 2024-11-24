@@ -14,10 +14,10 @@ try:
 except NameError:
     unicode = str
 
-base_dir = os.getcwd()+'\\Shukongdashi\\demo\\data\\cnews'
+base_dir = os.getcwd()+'/Shukongdashi/demo/data/cnews'
 vocab_dir = os.path.join(base_dir, 'guzhang.vocab.txt')
 
-save_dir = os.getcwd()+'\\Shukongdashi\\demo\\checkpoints\\textcnn'
+save_dir = os.getcwd()+'/Shukongdashi/demo/checkpoints/textcnn'
 save_path = os.path.join(save_dir, 'best_validation')  # 最佳验证结果保存路径
 
 
